@@ -56,7 +56,7 @@ void loop() {
 
   // Run current mode
   if (currentMode == 1) {
-    // Constant ON (inverted LED: 0 = ON)
+    
     PowerLEDControl(0, 0, 0);
   }
   else if (currentMode == 2) {
@@ -70,7 +70,7 @@ void loop() {
   }
 }
 
-// Returns 1 on short *or* long press release, 0 otherwise
+// Returns 1 on short *or* long press release, 0 otherwise (kept it from previous codes)
 int checkButton() {
   int clickType = 0;
 
@@ -112,11 +112,11 @@ void Blinking(int interval) {
 
   if (currentTime - blinkTimer > (unsigned long)interval) {
     if (blinkOn) {
-      // Inverted LED: 0 = ON
+      
       PowerLEDControl(0, 0, 0);
     } 
     else {
-      // Inverted LED: 255 = OFF
+      
       PowerLEDControl(255, 255, 255);
     }
 
